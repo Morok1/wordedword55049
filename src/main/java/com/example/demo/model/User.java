@@ -1,10 +1,14 @@
 package com.example.demo.model;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "USERS")
+@Data
 public class User {
     @Id
     long id;

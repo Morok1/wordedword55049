@@ -10,5 +10,5 @@ import java.util.Set;
 @Getter
 public class UserDto {
     private String name;
-    private Set<Travel> travels;
+    private Set<TravelDto> travels;
 }

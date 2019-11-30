@@ -1,16 +1,15 @@
 package com.example.demo.dto;
 
-import com.example.demo.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
 @Getter
 public class TravelDto {
     private String name;
-    private int user_id;
-    private Flight first_flight;
+    private List<FlightDto> flightDtos;
     private Set<String> requirements;
 }
