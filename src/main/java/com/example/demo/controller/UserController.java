@@ -21,10 +21,15 @@ public class UserController {
     }
 
 //  get userId all travels
-    @GetMapping("user/{id}")
+    @GetMapping("/user/{id}")
     public UserDto getUserById(@PathVariable("id") Long id){
         return service.getUserById(id);
     }
 
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
 
 }

@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 import javax.persistence.Entity;
 
-@Entity
+//@Entity
 public class Region {
 
 

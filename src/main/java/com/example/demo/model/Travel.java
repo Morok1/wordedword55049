@@ -1,15 +1,16 @@
 package com.example.demo.model;
 
-import lombok.Data;
+import lombok.Getter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "TRAVELS")
-@Data
+@Getter
 public class Travel {
     @Id
     private long travel_id;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

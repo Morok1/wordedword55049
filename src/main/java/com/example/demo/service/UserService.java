@@ -16,10 +16,8 @@ public class UserService {
     private final UserConverter userConverter;
     private final UserRepository repository;
 
-
     public List<User> getAll(){
-        List<User> users = repository.findAll();
-        return users;
+        return repository.findAll();
     }
 
     public UserDto getUserById(Long id) {

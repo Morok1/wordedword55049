@@ -9,13 +9,13 @@ public class Flight {
     @Id
     private Long id;
 
-    @Column(name="region")
-    private String region;
+//    @Column(name="region")
+//    private String region;
 
     @Column(name="price")
     private Long price;
 
-    @Column(name = "orderNumber")
+    @Column(name = "order_travel")
     private Integer orderNumber;
 
     @Column(name = "destination")
