@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8083")
 public class UserController {
     @Autowired
     private UserService service;
 
     @GetMapping("/allusers")
+    @CrossOrigin(origins = "http://localhost:3001")
     public List<UserDto> allusers() {
         return service.getAll();
     }
