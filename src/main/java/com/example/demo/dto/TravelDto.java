@@ -10,6 +10,6 @@ import java.util.Set;
 @Getter
 public class TravelDto {
     private String name;
-    private List<FlightDto> flightDtos;
+//    private List<FlightDto> flightDtos;
     private Set<String> requirements;
 }

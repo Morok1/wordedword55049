@@ -14,9 +14,11 @@ public class Travel {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "travel")
-    private List<Flight> flights;
+//    @OneToMany(mappedBy = "travel")
+//    private List<Flight> flights;
+//
 }

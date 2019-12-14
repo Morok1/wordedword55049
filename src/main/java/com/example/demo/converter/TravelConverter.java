@@ -13,15 +13,16 @@ import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
+
 public class TravelConverter implements Converter<Travel, TravelDto> {
-    private final FlightConverter flightConverter;
+//    private final FlightConverter flightConverter;
 
     @Override
     public TravelDto convert(Travel travel) {
-        return new TravelDto(travel.getName(), convertToFlights(travel), Collections.emptySet());
+        return new TravelDto(travel.getName(), /*convertToFlights(travel)*/ Collections.emptySet());
     }
 
-    private List<FlightDto> convertToFlights(Travel travel) {
-        return travel.getFlights().stream().map(flightConverter::convert).collect(Collectors.toList());
-    }
+//    private List<FlightDto> convertToFlights(Travel travel) {
+//        return travel.getFlights().stream().map(flightConverter::convert).collect(Collectors.toList());
+//    }
 }
