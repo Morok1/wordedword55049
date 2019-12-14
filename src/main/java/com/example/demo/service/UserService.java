@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -16,8 +17,11 @@ public class UserService {
     private final UserConverter userConverter;
     private final UserRepository repository;
 
-    public List<User> getAll(){
-        return repository.findAll();
+    public List<UserDto> getAll(){
+        return repository.findAll()
+                .stream()
+                .map(userConverter::convert)
+                .collect(Collectors.toList());
     }
 
     public UserDto getUserById(Long id) {
